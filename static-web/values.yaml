@@ -1,0 +1,20 @@
+# values.yaml
+replicaCount: 1
+
+image:
+  repository: jimmy0319/static-web:latest  # 替換為你的映像檔路徑
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: true
+  className: ""
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/rewrite-target: /
+  host: my-static-site.com  # 替換為你的網域名稱
+  path: /
