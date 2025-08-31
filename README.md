@@ -1,1 +1,1 @@
-# sre_homework
+# This project is for SRE homework usage only
